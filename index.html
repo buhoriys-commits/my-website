@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Манас — Путеводитель по достопримечательностям и отдыху</title>
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="5"/>
+                    <path d="M20 70L40 40L55 60L75 30L90 70H20Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M15 75L35 48L52 68L70 42L85 75H15Z" fill="currentColor"/>
+                    <path d="M50 20C50 20 65 35 65 50C65 60 55 65 50 65C45 65 35 60 35 50C35 35 50 20 50 20Z" fill="#2E7D32" opacity="0.8"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-title">МАНАС</span>
+                    <span class="logo-subtitle">Туристический гид</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">О городе</a>
+                <a href="#places" class="nav-link">Достопримечательности</a>
+                <a href="#guides" class="nav-link">Гиды</a>
+                <a href="#planner" class="nav-link">Маршруты</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Главный баннер (Hero) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Джалал-Абадская область • Кыргызстан</span>
+            <h1 class="hero-title">Откройте для себя величественный Манас</h1>
+            <p class="hero-description">Живописные природные ландшафты, богатая культура, комфортные места отдыха и незабываемые впечатления в сердце региона.</p>
+            <div class="hero-actions">
+                <a href="#places" class="btn btn-primary">Исследовать места</a>
+                <a href="#planner" class="btn btn-outline">Спланировать маршрут</a>
+            </div>
+            
+            <!-- Статистика -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Локаций для отдыха</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2400 м</span>
+                    <span class="stat-label">Высота над уровнем моря</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Солнечных дней в году</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О городе -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Добро пожаловать</span>
+                <h2 class="section-title">Атмосфера и природа Манаса</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🏔️</div>
+                    <h3>Уникальная природа</h3>
+                    <p>Чистый горный воздух, альпийские луга и прозрачные реки создают идеальные условия для восстановления сил и эко-туризма.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🏛️</div>
+                    <h3>Культурное наследие</h3>
+                    <p>Богатые традиции, гостеприимство местных жителей и исторические памятники погрузят вас в аутентичную атмосферу.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🏕️</div>
+                    <h3>Комфортный отдых</h3>
+                    <p>Современные зоны отдыха, гостевые дома и туры разной сложности сделают вашу поездку максимально комфортной.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Виджет погоды -->
+    <section class="weather-banner">
+        <div class="container weather-container">
+            <div class="weather-info">
+                <span class="weather-label">Текущая погода в районе Манас:</span>
+                <div class="weather-main">
+                    <span class="weather-icon" id="weatherIcon">☀️</span>
+                    <span class="weather-temp" id="weatherTemp">+22°C</span>
+                    <span class="weather-desc" id="weatherDesc">Ясно, идеальное время для прогулок</span>
+                </div>
+            </div>
+            <div class="weather-recommendation">
+                💡 <strong>Рекомендация:</strong> Отличный день для экскурсий в горы и посещения открытых зон отдыха!
+            </div>
+        </div>
+    </section>
+
+    <!-- Достопримечательности и Места отдыха -->
+    <section id="places" class="section places-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Куда сходить</span>
+                <h2 class="section-title">Достопримечательности и отдых</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filters-container">
+                <button class="filter-btn active" data-filter="all">Все места</button>
+                <button class="filter-btn" data-filter="nature">Природа</button>
+                <button class="filter-btn" data-filter="culture">Культура & История</button>
+                <button class="filter-btn" data-filter="leisure">Отдых & Развлечения</button>
+            </div>
+
+            <!-- Сетка карточек -->
+            <div class="places-grid" id="placesGrid">
+                <!-- Карточки будут динамически загружаться или фильтроваться через JS -->
+                <div class="place-card" data-category="nature">
+                    <div class="place-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Горное ущелье" class="place-img">
+                        <span class="place-badge">Природа</span>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-title">Горное ущелье и панорамы</h3>
+                        <p class="place-desc">Великолепные живописные вершины с панорамным видом на долину и чистейшими родниками.</p>
+                        <div class="place-footer">
+                            <span class="place-tag">📍 12 км от центра</span>
+                            <button class="btn-more" onclick="openModal('gorge')">Подробнее →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-card" data-category="culture">
+                    <div class="place-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Исторический комплекс" class="place-img">
+                        <span class="place-badge">Культура</span>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-title">Этно-комплекс и музей</h3>
+                        <p class="place-desc">Погружение в историю края, традиционные юрты, национальные ремесла и дегустация блюд.</p>
+                        <div class="place-footer">
+                            <span class="place-tag">📍 Центр города</span>
+                            <button class="btn-more" onclick="openModal('museum')">Подробнее →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-card" data-category="leisure">
+                    <div class="place-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Зона отдыха" class="place-img">
+                        <span class="place-badge">Отдых</span>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-title">Семейный парк отдыха</h3>
+                        <p class="place-desc">Уютные беседки на берегу реки, детские площадки, бассейны и зоны для пикника.</p>
+                        <div class="place-footer">
+                            <span class="place-tag">📍 3 км от центра</span>
+                            <button class="btn-more" onclick="openModal('park')">Подробнее →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-card" data-category="nature">
+                    <div class="place-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Горный водопад" class="place-img">
+                        <span class="place-badge">Природа</span>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-title">Водопад "Серебряные струи"</h3>
+                        <p class="place-desc">Красивейший водопад высотой 25 метров, окруженный прохладным хвойным лесом.</p>
+                        <div class="place-footer">
+                            <span class="place-tag">📍 18 км от центра</span>
+                            <button class="btn-more" onclick="openModal('waterfall')">Подробнее →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Интерактивный генератор маршрута -->
+    <section id="planner" class="section planner-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Интерактивный помощник</span>
+                <h2 class="section-title">Спланируйте идеальный день</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="planner-box">
+                <div class="planner-form">
+                    <div class="form-group">
+                        <label>Сколько у вас времени?</label>
+                        <select id="planTime" class="form-select">
+                            <option value="half">Полдня (3-4 часа)</option>
+                            <option value="full" selected>Полный день (8-10 часов)</option>
+                            <option value="weekend">Уикенд (2 дня)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваши предпочтения:</label>
+                        <select id="planType" class="form-select">
+                            <option value="active">Активный отдых и трекинг</option>
+                            <option value="relax">Расслабленный семейный отдых</option>
+                            <option value="photo">Фототур и достопримечательности</option>
+                        </select>
+                    </div>
+                    <button id="generatePlanBtn" class="btn btn-primary btn-block">Сгенерировать маршрут</button>
+                </div>
+
+                <div class="planner-result" id="plannerResult">
+                    <h3 id="planTitle">Ваш индивидуальный маршрут</h3>
+                    <div class="timeline" id="planTimeline">
+                        <!-- Динамический маршрут через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Местные Гиды -->
+    <section id="guides" class="section guides-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Профессиональное сопровождение</span>
+                <h2 class="section-title">Местные гиды и проводники</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="guides-grid">
+                <!-- Гид 1 -->
+                <div class="guide-card">
+                    <div class="guide-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Айгуль" class="guide-avatar">
+                        <span class="guide-rating">⭐ 4.9</span>
+                    </div>
+                    <div class="guide-info">
+                        <h3 class="guide-name">Айгуль Бектемирова</h3>
+                        <span class="guide-spec">Историко-культурный гид</span>
+                        <p class="guide-bio">Проводит увлекательные экскурсии по культурным памятникам, музеям и рассказывает легенды региона. Стаж 6 лет.</p>
+                        <div class="guide-languages">
+                            <span>Кыргызский</span>
+                            <span>Русский</span>
+                            <span>Английский</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="https://t.me/+996220089033" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                            <a href="https://wa.me/996220089033" target="_blank" class="btn btn-sm btn-primary">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Гид 2 -->
+                <div class="guide-card">
+                    <div class="guide-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Азиз" class="guide-avatar">
+                        <span class="guide-rating">⭐ 5.0</span>
+                    </div>
+                    <div class="guide-info">
+                        <h3 class="guide-name">Азиз Нурбеков</h3>
+                        <span class="guide-spec">Горный проводник & Горные туры</span>
+                        <p class="guide-bio">Эксперт по пешим трекингам, горным водопадам и скрытым локациям Манаса. Опыт работы 8 лет.</p>
+                        <div class="guide-languages">
+                            <span>Кыргызский</span>
+                            <span>Русский</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="https://t.me/+996220089033" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                            <a href="https://wa.me/996220089033" target="_blank" class="btn btn-sm btn-primary">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Гид 3 -->
+                <div class="guide-card">
+                    <div class="guide-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Бакыт" class="guide-avatar">
+                        <span class="guide-rating">⭐ 4.8</span>
+                    </div>
+                    <div class="guide-info">
+                        <h3 class="guide-name">Бакыт Токтогулов</h3>
+                        <span class="guide-spec">Авто-экскурсии & Джип-туры</span>
+                        <p class="guide-bio">Комфортные поездки на джипах к удаленным местам отдыха, водопадам и панорамам. Стаж 5 лет.</p>
+                        <div class="guide-languages">
+                            <span>Кыргызский</span>
+                            <span>Русский</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="https://t.me/+996220089033" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                            <a href="https://wa.me/996220089033" target="_blank" class="btn btn-sm btn-primary">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы туристов -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Впечатления</span>
+                <h2 class="section-title">Отзывы путешественников</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <strong>Нурбек С.</strong>
+                            <span class="review-date">12 октября 2026</span>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">«Прекрасное место! Горный воздух и водопады просто поразили своей красотой. Гиды помогли составить идеальный маршрут за один день!»</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <strong>Елена М.</strong>
+                            <span class="review-date">28 сентября 2026</span>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">«Приезжали всей семьей. Отличные зоны отдыха у реки, гостеприимные люди и очень вкусная национальная кухня!»</p>
+                </div>
+            </div>
+
+            <!-- Форма добавления отзыва -->
+            <div class="add-review-box">
+                <h3>Оставить свой отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-row">
+                        <input type="text" id="reviewName" placeholder="Ваше имя" required class="form-input">
+                        <select id="reviewRating" class="form-select">
+                            <option value="5">Оценка: 5 ⭐⭐⭐⭐⭐</option>
+                            <option value="4">Оценка: 4 ⭐⭐⭐⭐</option>
+                            <option value="3">Оценка: 3 ⭐⭐⭐</option>
+                        </select>
+                    </div>
+                    <textarea id="reviewText" placeholder="Расскажите о ваших впечатлениях..." required class="form-textarea"></textarea>
+                    <button type="submit" class="btn btn-primary">Опубликовать отзыв</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Карта -->
+    <section id="contacts" class="section contacts-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Связь с нами</span>
+                <h2 class="section-title">Контакты & Расположение</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contacts-wrapper">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Адрес туристического центра</h4>
+                            <p>Кыргызстан, Джалал-Абадская область, Манасский район</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Телефон / WhatsApp</h4>
+                            <p><a href="tel:+996220089033">+996 220 089 033</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Социальные сети & Мессенджеры</h4>
+                            <div class="social-links">
+                                <a href="https://t.me/+996220089033" target="_blank" class="social-btn telegram-btn">
+                                    Telegram
+                                </a>
+                                <a href="https://www.instagram.com/abdulaz1z_.04?rpxt=bHYwcWpwbmhxemJy" target="_blank" class="social-btn instagram-btn">
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма вопросов -->
+                <div class="contact-form-card">
+                    <h3>Задать вопрос / Заказать тур</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Ваше имя" class="form-input" required>
+                        <input type="tel" placeholder="Номер телефона" class="form-input" required>
+                        <textarea placeholder="Ваше сообщение или пожелания по туру..." class="form-textarea" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="5"/>
+                    <path d="M15 75L35 48L52 68L70 42L85 75H15Z" fill="currentColor"/>
+                </svg>
+                <span>Манас Туризм</span>
+            </div>
+            <p>© 2026 Туристический путеводитель по городу Манас. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для подгрузки подробной информации -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Название места</h3>
+            <img id="modalImg" src="" alt="" class="modal-img">
+            <p id="modalText">Подробное описание...</p>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
