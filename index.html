@@ -1,89 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Манас и регион — Туристический путеводитель</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <!-- Библиотека Leaflet для интерактивной карты -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Шапка сайта -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <div class="logo-text">
-                    <span class="logo-title" data-i18n="logoTitle">МАНАС</span>
-                    <span class="logo-subtitle" data-i18n="logoSub">Туристический гид</span>
-                </div>
-            </a>
-
-            <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active" data-i18n="navHome">Главная</a>
-                <a href="destinations.html" class="nav-link" data-i18n="navDest">Направления</a>
-                <a href="guides.html" class="nav-link" data-i18n="navGuides">Гиды</a>
-                <a href="planner.html" class="nav-link" data-i18n="navPlanner">Маршруты</a>
-                <a href="contacts.html" class="nav-link" data-i18n="navContacts">Контакты</a>
-            </nav>
-
-            <div class="header-controls">
-                <!-- Переключатель языка -->
-                <button class="lang-btn" id="langToggle">KG / RU</button>
-                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Главный баннер -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-badge" data-i18n="heroBadge">Джалал-Абадская область • Кыргызстан</span>
-            <h1 class="hero-title" data-i18n="heroTitle">Откройте жемчужины Тянь-Шаня</h1>
-            <p class="hero-description" data-i18n="heroDesc">Путеводитель по Манасу, легендарному ореховому раю Арсланбобу и живописному Кызыл-Унгкуру.</p>
-            <div class="hero-actions">
-                <a href="destinations.html" class="btn btn-primary" data-i18n="btnDest">Выбрать направление</a>
-                <a href="planner.html" class="btn btn-outline" data-i18n="btnPlanner">Спланировать маршрут</a>
-            </div>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label" data-i18n="stat1">Уникальных локаций</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1000 лет</span>
-                    <span class="stat-label" data-i18n="stat2">Реликлиевые леса</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label" data-i18n="stat3">Поддержка гидов</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Главные регионы -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle" data-i18n="regSub">Регионы для путешествий</span>
-                <h2 class="section-title" data-i18n="regTitle">Главные жемчужины маршрута</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="places-grid">
+<div class="places-grid">
                 <div class="place-card">
                     <div class="place-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Арсланбоб" class="place-img">
+                        <!-- Реальное фото Арсланбоба (водопад и ореховый лес) -->
+                        <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=80" alt="Арсланбоб" class="place-img">
                         <span class="place-badge" data-i18n="badgeArs">Легендарное место</span>
                     </div>
                     <div class="place-content">
@@ -101,7 +20,8 @@
 
                 <div class="place-card">
                     <div class="place-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Кызыл-Унгкур" class="place-img">
+                        <!-- Реальное фото Кызыл-Унгкура (хвойный бор и скалы) -->
+                        <img src="https://images.unsplash.com/photo-1511497584788-876761197069?auto=format&fit=crop&w=800&q=80" alt="Кызыл-Унгкур" class="place-img">
                         <span class="place-badge" data-i18n="badgeKyz">Уединение и леса</span>
                     </div>
                     <div class="place-content">
@@ -119,6 +39,7 @@
 
                 <div class="place-card">
                     <div class="place-img-wrapper">
+                        <!-- Реальное фото региона Манас -->
                         <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Манас" class="place-img">
                         <span class="place-badge" data-i18n="badgeMan">Культурный центр</span>
                     </div>
@@ -135,63 +56,3 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Секция FAQ / Чек-лист туриста -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle" data-i18n="faqSub">Полезная информация</span>
-                <h2 class="section-title" data-i18n="faqTitle">Часто задаваемые вопросы</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="q1">Какое лучшее время года для поездки в Арсланбоб?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="a1">Лучшее время — с мая по октябрь. Летом здесь приятно прохладно благодаря тени ореховых лесов, а осенью (сентябрь-октябрь) начинается сбор урожая грецких орехов.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="q2">Какая связь и интернет ловит в горах?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="a2">В крупных селах и центрах уверенно работают мобильные операторы (O!, Beeline, MegaCom). В глубоких ущельях связь может пропадать, что идеально для цифрового детокса.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="q3">Что обязательно нужно взять с собой в поход?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="a3">Удобную трекинговую обувь, солнцезащитный крем, головной убор, легкую ветровку (вечерами в горах бывает прохладно) и бутылку для воды.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Манас & Регион Туризм</span>
-            </div>
-            <p>© 2026 Туристический путеводитель. Все права защищены.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
