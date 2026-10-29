@@ -1,63 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Направления и галерея</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header class="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <div class="logo-text">
-                    <span class="logo-title">МАНАС</span>
-                    <span class="logo-subtitle">Туристический гид</span>
-                </div>
-            </a>
-            <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Главная</a>
-                <a href="destinations.html" class="nav-link active">Направления</a>
-                <a href="guides.html" class="nav-link">Гиды</a>
-                <a href="planner.html" class="nav-link">Маршруты</a>
-                <a href="contacts.html" class="nav-link">Контакты</a>
-            </nav>
-            <div class="header-controls">
-                <button class="lang-btn" id="langToggle">KG / RU</button>
-                <button class="burger-btn" id="burgerBtn"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </header>
-
-    <section class="section" style="margin-top: 50px;">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-subtitle">Исследуйте регион</span>
-                <h2 class="section-title">Все локации и достопримечательности</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="filters-container">
-                <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="arslanbob">Арсланбоб</button>
-                <button class="filter-btn" data-filter="kyzyl">Кызыл-Унгкур</button>
-                <button class="filter-btn" data-filter="manas">Манас</button>
-            </div>
-
-            <div class="places-grid">
+<div class="places-grid">
+                <!-- Арсланбоб 1 -->
                 <div class="place-card" data-category="arslanbob" id="arslanbob">
                     <div class="place-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Арсланбоб" class="place-img">
+                        <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=80" alt="Арсланбоб водопад" class="place-img">
                         <span class="place-badge">Арсланбоб</span>
                     </div>
                     <div class="place-content">
                         <h3 class="place-title">Большой водопад Арсланбоб</h3>
-                        <p class="place-desc">Падающий с высоты 80 метров водопад в окружении тысячелетних ореховых деревьев.</p>
+                        <p class="place-desc">Падающий с большой высоты водопад в окружении тысячелетних ореховых деревьев.</p>
                         <div class="place-footer">
                             <span class="place-tag">📍 Арсланбоб</span>
                             <a href="contacts.html" class="btn-more">Заказать тур →</a>
@@ -65,14 +15,15 @@
                     </div>
                 </div>
 
+                <!-- Арсланбоб 2 -->
                 <div class="place-card" data-category="arslanbob">
                     <div class="place-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Малый водопад" class="place-img">
+                        <img src="https://images.unsplash.com/photo-1511497584788-876761197069?auto=format&fit=crop&w=800&q=80" alt="Ореховый лес" class="place-img">
                         <span class="place-badge">Арсланбоб</span>
                     </div>
                     <div class="place-content">
-                        <h3 class="place-title">Малый водопад и гроты</h3>
-                        <p class="place-desc">Уютное ущелье с чистейшей горной водой и панорамными видами.</p>
+                        <h3 class="place-title">Реликтовый ореховый лес</h3>
+                        <p class="place-desc">Уникальные лесные массивы, целебный воздух и живописные тропинки для эко-туризма.</p>
                         <div class="place-footer">
                             <span class="place-tag">📍 Арсланбоб</span>
                             <a href="contacts.html" class="btn-more">Заказать тур →</a>
@@ -80,14 +31,15 @@
                     </div>
                 </div>
 
+                <!-- Кызыл-Унгкур -->
                 <div class="place-card" data-category="kyzyl" id="kyzyl-ungkur">
                     <div class="place-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Кызыл-Унгкур" class="place-img">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Кызыл-Унгкур хвойный бор" class="place-img">
                         <span class="place-badge">Кызыл-Унгкур</span>
                     </div>
                     <div class="place-content">
-                        <h3 class="place-title">Красные скалы и хвойный бор</h3>
-                        <p class="place-desc">Уникальный ландшафт сочетания красных каньонов и густых хвойных лесов.</p>
+                        <h3 class="place-title">Красные каньоны и хвойный бор</h3>
+                        <p class="place-desc">Необыкновенное сочетание красноватых скальных пород и густых хвойных деревьев.</p>
                         <div class="place-footer">
                             <span class="place-tag">📍 Кызыл-Унгкур</span>
                             <a href="contacts.html" class="btn-more">Заказать тур →</a>
@@ -95,14 +47,15 @@
                     </div>
                 </div>
 
+                <!-- Манас -->
                 <div class="place-card" data-category="manas" id="manas">
                     <div class="place-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Манас парк" class="place-img">
                         <span class="place-badge">Манас</span>
                     </div>
                     <div class="place-content">
-                        <h3 class="place-title">Центральный парк и этно-зоны</h3>
-                        <p class="place-desc">Комфортные беседки, национальная кухня, детские площадки и зоны отдыха у реки.</p>
+                        <h3 class="place-title">Центральный парк и зоны отдыха</h3>
+                        <p class="place-desc">Комфортные места для семейного отдыха, беседки у реки и национальная кухня.</p>
                         <div class="place-footer">
                             <span class="place-tag">📍 Манас</span>
                             <a href="contacts.html" class="btn-more">Заказать тур →</a>
@@ -111,7 +64,7 @@
                 </div>
             </div>
 
-            <!-- Фотогалерея с Lightbox -->
+            <!-- Галерея с реальными атмосферными видами -->
             <div class="section-header text-center" style="margin-top: 80px;">
                 <span class="section-subtitle">Визуальный тур</span>
                 <h2 class="section-title">Галерея пейзажей</h2>
@@ -119,26 +72,8 @@
             </div>
 
             <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Горы" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Лес" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=800&q=80" alt="Арсланбоб" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1511497584788-876761197069?auto=format&fit=crop&w=800&q=80" alt="Кызыл-Унгкур" class="gallery-img">
                 <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Природа" class="gallery-img">
-                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Водопад" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Горы Тянь-Шаня" class="gallery-img">
             </div>
-        </div>
-    </section>
-
-    <!-- Модальное окно для галереи (Lightbox) -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightboxImg">
-    </div>
-
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-logo"><span>Манас & Регион Туризм</span></div>
-            <p>© 2026 Все права защищены.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
