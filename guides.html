@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши гиды и проводники</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <div class="logo-text">
+                    <span class="logo-title">МАНАС</span>
+                    <span class="logo-subtitle">Туристический гид</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="destinations.html" class="nav-link">Направления</a>
+                <a href="guides.html" class="nav-link active">Гиды</a>
+                <a href="planner.html" class="nav-link">Маршруты</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+            <div class="header-controls">
+                <button class="lang-btn" id="langToggle">KG / RU</button>
+                <button class="burger-btn" id="burgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="margin-top: 50px;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Команда экспертов</span>
+                <h2 class="section-title">Местные гиды по Арсланбобу и Манасу</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <div class="guide-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Айгуль" class="guide-avatar">
+                        <span class="guide-rating">⭐ 4.9</span>
+                    </div>
+                    <div class="guide-info">
+                        <h3 class="guide-name">Айгуль Бектемирова</h3>
+                        <span class="guide-spec">Гиды по ореховым лесам Арсланбоба</span>
+                        <p class="guide-bio">Знает каждую тропинку реликтовых лесов, секретные водопады и древние легенды.</p>
+                        <div class="guide-languages">
+                            <span>Кыргызский</span><span>Русский</span><span>Английский</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="https://t.me/+996220089033" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                            <a href="https://wa.me/996220089033" target="_blank" class="btn btn-sm btn-primary">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Азиз" class="guide-avatar">
+                        <span class="guide-rating">⭐ 5.0</span>
+                    </div>
+                    <div class="guide-info">
+                        <h3 class="guide-name">Азиз Нурбеков</h3>
+                        <span class="guide-spec">Горный проводник (Кызыл-Унгкур)</span>
+                        <p class="guide-bio">Профессиональный альпинист и инструктор по трекингу по красным скалам и каньонам.</p>
+                        <div class="guide-languages">
+                            <span>Кыргызский</span><span>Русский</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="https://t.me/+996220089033" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                            <a href="https://wa.me/996220089033" target="_blank" class="btn btn-sm btn-primary">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo"><span>Манас & Регион Туризм</span></div>
+            <p>© 2026 Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
