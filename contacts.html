@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты и интерактивная карта</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Стили Leaflet карты -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <div class="logo-text">
+                    <span class="logo-title">МАНАС</span>
+                    <span class="logo-subtitle">Туристический гид</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="destinations.html" class="nav-link">Направления</a>
+                <a href="guides.html" class="nav-link">Гиды</a>
+                <a href="planner.html" class="nav-link">Маршруты</a>
+                <a href="contacts.html" class="nav-link active">Контакты</a>
+            </nav>
+            <div class="header-controls">
+                <button class="lang-btn" id="langToggle">KG / RU</button>
+                <button class="burger-btn" id="burgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section contacts-section" style="margin-top: 50px;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Связь с нами</span>
+                <h2 class="section-title">Контакты & Бронирование туров</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contacts-wrapper">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Регион деятельности</h4>
+                            <p>Кыргызстан, Джалал-Абадская область (Манас, Арсланбоб, Кызыл-Унгкур)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Телефон / WhatsApp / Telegram</h4>
+                            <p><a href="tel:+996220089033">+996 220 089 033</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Прямые ссылки</h4>
+                            <div class="social-links">
+                                <a href="https://t.me/+996220089033" target="_blank" class="social-btn telegram-btn">Telegram</a>
+                                <a href="https://www.instagram.com/abdulaz1z_.04?rpxt=bHYwcWpwbmhxemJy" target="_blank" class="social-btn instagram-btn">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Забронировать тур или задать вопрос</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Ваше имя" class="form-input" required>
+                        <input type="tel" placeholder="Номер телефона" class="form-input" required>
+                        <textarea placeholder="Куда хотите поехать (Манас, Арсланбоб, Кызыл-Унгкур)..." class="form-textarea" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Интерактивная карта -->
+            <div class="map-container-box" style="margin-top: 60px;">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Карта региона</span>
+                    <h2 class="section-title">Наши локации на карте</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div id="map" style="width: 100%; height: 450px; border-radius: 12px; border: 1px solid var(--border-color);"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo"><span>Манас & Регион Туризм</span></div>
+            <p>© 2026 Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт Leaflet карты -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
